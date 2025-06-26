@@ -1,0 +1,59 @@
+.navbar {
+  background: linear-gradient(to right, #000000,#313033#313033); /* smooth dark gradient */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+}
+
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-icon {
+  color: rgb(175, 171, 171);
+  transition: transform 0.3s ease;
+  animation: floatIcon 3s ease-in-out infinite;
+  animation: flicker 2s infinite;
+}
+
+.nav-icon:hover {
+  transform: scale(1.2);
+  color: #ffffff; /* Optional: purple on hover */
+}
+
+
+
+/* Subtle floating animation */
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/*icon flicker effect*/
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #000000) drop-shadow(0 0 8px #dfdee1);
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+    filter: none;
+  }
+}

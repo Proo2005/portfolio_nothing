@@ -1,0 +1,101 @@
+.about-page {
+
+  color: white;
+  font-family: 'DotGothic16', monospace;
+  padding: 40px;
+}
+
+.about-header {
+  font-size: 5vmin;
+  margin-bottom: 30px;
+  animation: flicker 3s infinite;
+  text-align: left;
+}
+
+.about-main-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto 50px;
+  max-width: 750px;
+}
+
+.about-left {
+  font-size: 2vmin;
+  animation: flicker 4s infinite;
+}
+
+.about-right img {
+  width: 120px;
+  height: 160px;
+  border: 1px solid white;
+  object-fit: cover;
+  animation: flicker 3.5s infinite;
+}
+
+.about-info-section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: nowrap; /* Ensure items stay in a row */
+  margin-bottom: 40px
+}
+
+
+.info-box {
+  flex: 1 1 45%;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  animation: flicker 4s infinite;
+}
+
+.info-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  font-size: 2vmin;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  font-size: 1.5vmin;
+  line-height: 1.6;
+}
+
+/* Flicker effect */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-main-box,
+  .about-info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-right img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+}

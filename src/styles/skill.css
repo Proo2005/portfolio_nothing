@@ -1,0 +1,119 @@
+.skills-page {
+
+  color: #fff;
+  padding: 60px 30px;
+  font-family: 'DotGothic16', monospace;
+  text-align: left;
+}
+
+.skills-title {
+  font-size: 6vmin;
+  margin-bottom: 40px;
+  animation: flicker 3s infinite;
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.skill-category {
+  flex: 1 1 45%;
+  margin-bottom: 60px;
+  /* Add space between Web and AIML */
+}
+
+
+.category-heading {
+  font-size: 4vmin;
+  margin-bottom: 20px;
+  margin-left:30px;
+  animation: flicker 4s infinite;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  
+}
+
+.skills-grid.web {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-right:100px;
+}
+
+.skills-grid.aiml {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 60px;
+  transition: transform 0.3s;
+  animation: flicker 4s infinite;
+}
+
+.skill-item span {
+  margin-top: 10px;
+  font-size: 1.5vmin;
+  text-align: center;
+}
+
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+/* Flicker effect */
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0.2;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-category {
+    width: 100%;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .skill-item {
+    font-size: 40px;
+  }
+
+  .skill-item span {
+    font-size: 2.2vmin;
+  }
+}

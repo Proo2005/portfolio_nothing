@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-container {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
+.page-content {
+  flex: 1;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: rotateY(10deg);
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: rotateY(0);
   }
+}
+
+/* Flip animation */
+/* Container with perspective for 3D effect */
+.transition-wrapper {
+  perspective: 1200px;
+  position: relative;
+}
+
+/* Initial state before entering */
+.flip-enter {
+  transform: rotateY(90deg);
+  opacity: 0;
+  transform-origin: left center;
+}
+
+/* During entering */
+.flip-enter-active {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+/* Initial state before exiting */
+.flip-exit {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transform-origin: right center;
+}
+
+/* During exiting */
+.flip-exit-active {
+  transform: rotateY(-90deg);
+  opacity: 0;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+/* Optional: Smooth rendering */
+.page-content {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }

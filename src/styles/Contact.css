@@ -1,0 +1,133 @@
+
+/* Main Contact Page */
+.contact-page {
+
+  color: white;
+  animation: flickerText 3s infinite;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Header */
+.contact-header {
+  font-size: 5vmin;
+  margin-bottom: 50px;
+  animation: flickerText 3s infinite;
+  font-family: 'DotGothic16', monospace;
+  text-align: left;
+}
+
+/* Form Layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Input Boxes */
+.input-box {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'DotGothic16', monospace;
+  
+}
+.input-row {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-direction: row;
+}
+
+
+/* Textarea Box */
+.message-box {
+
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  font-family: 'DotGothic16', monospace;
+}
+
+/* Send Button */
+.send-button {
+  padding: 12px 25px;
+  font-size: 1.5rem;
+  background-color:transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'DotGothic16', monospace;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: rgb(181, 181, 181);
+  color: black;
+}
+
+/* Flicker only the text */
+.send-button span {
+  display: inline-block;
+  animation: flickerText 3s infinite;
+}
+
+/* Flicker Effect */
+@keyframes flickerText {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .input-box,
+  .message-box {
+    width: 90%;
+  }
+
+  .send-button {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .input-box,
+  .message-box {
+    width: 100%;
+  }
+
+  .send-button {
+    font-size: 1.2rem;
+  }
+}
