@@ -33,7 +33,7 @@ function About() {
         <div className="info-box">
           <MdCamera className="info-icon" />
           <h3>Marks</h3>
-          <p>90% (10th) + 92% (12th) + 8.5 CGPA (B.Tech)</p>
+          <p>86% (10th) + 80% (12th) + 8.6 CGPA (B.Tech)</p>
         </div>
         
       </div>
