@@ -1,8 +1,9 @@
 # Getting Started with Create React App
 first look:
-### 🧪 Demo Video
+### 💡 Demo Preview
 
-[▶️ Click here to watch the demo](./public/Screen Recording 2025-06-30 174921.mp4)
+![Demo](./public/demo.gif)
+
 
 
 portfolio site:
