@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 first look:
+public/Screen Recording 2025-06-30 174921.mp4
 
 portfolio site:
 https://fabulous-scone-7603f3.netlify.app/
